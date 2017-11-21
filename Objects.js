@@ -45,3 +45,17 @@ console.log('Test deque is ', test.data);
 test.pop();
 test.popLeft();
 console.log('After popLeft and pop', test.data);
+
+//Фабрика
+newStack.prototype.fromArray = function fromArray([x, y]) {
+    for (let i = x; i < y; ++i) {
+        this.push(i);
+    }
+    return this;
+}
+//Вызываем фабрику newStack для Deque.
+
+test.fromArray([100,120]);
+console.log(test.data);
+
+console.log(test.fromArray);
