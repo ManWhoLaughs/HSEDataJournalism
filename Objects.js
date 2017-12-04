@@ -1,42 +1,47 @@
 //Ещё допилю оставшиеся задания
 
 //Реализация стека
-const Stack = {
-    data : [],
-    push : function(x) {
-        this.data.push(x);
-        return x;
-    },
-    pop : function() {
+class Stack{
+
+    constructor(arr=[]) {
+        this.data = arr;
+    }
+
+    pop() {
         return this.data.pop();
+    }
+
+    push(x) {
+        this.data.push(x);
+    }
+
+    static fromArray(arr=[]) {
+        let obj = new Stack();
+        obj.data = arr;
+        return obj;
     }
 };
 
-console.log(Stack.data);
-Stack.push("Stack");
-Stack.push("Overflow");
-console.log(Stack.data);
-Stack.pop();
-console.log(Stack.data);
+let test = new Stack([1,2,3]);
+console.log(test.data);
+test.push(4)
+console.log(test.data);
+test.pop();
+console.log(test.data);
 
-//Нормальный Stack и Deque, построенный от него.
 
-function newStack(arr) {
-    this.data = arr;
-    this.push = function(x) { return this.data.push(x)};
-    this.pop = function(x) { return this.data.pop(x)};
-}
-
-class Deque extends newStack {
+//Deque от стека
+class Deque extends Stack {
     constructor(arr) {
         super(arr);
         this.data = arr;
-        this.pushLeft = function(x){
-            return this.data.unshift(x);
-        };
-        this.popLeft = function(){
-            return this.data.shift();
-        };
+    }
+
+    pushLeft(x){
+        this.data.unshift(x);
+    }
+    popLeft(){
+        return this.data.shift();
     }
 };
 
@@ -46,16 +51,3 @@ test.pop();
 test.popLeft();
 console.log('After popLeft and pop', test.data);
 
-//Фабрика
-newStack.prototype.fromArray = function fromArray([x, y]) {
-    for (let i = x; i < y; ++i) {
-        this.push(i);
-    }
-    return this;
-}
-//Вызываем фабрику newStack для Deque.
-
-test.fromArray([100,120]);
-console.log(test.data);
-
-console.log(test.fromArray);
