@@ -43,4 +43,5 @@ https://github.com/ManWhoLaughs/HSEDataJournalism/blob/master/Objects.js
 2.Создана страница на Gh-pages с примером таблицы по количеству убийств: https://manwholaughs.github.io/
 3.К проекту прикреплён Jupyter Notebook с открытыми, обработанными и проанализированными данными.
 https://github.com/ManWhoLaughs/HSEDataJournalism/blob/master/DataFrame%20building.ipynb
+
 4.Получены ответы на первых 4 вопроса, плюс сделаны некоторые наблюдения.
