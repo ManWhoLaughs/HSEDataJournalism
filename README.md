@@ -48,3 +48,7 @@ https://github.com/ManWhoLaughs/HSEDataJournalism/blob/master/Objects.js
 https://github.com/ManWhoLaughs/HSEDataJournalism/blob/master/DataFrame%20building.ipynb
 
 4.Получены ответы на первых 4 вопроса, плюс сделаны некоторые наблюдения.
+
+# Релиз
+Проект завершён и успешно запущен на gh-pages.
+https://manwholaughs.github.io/
